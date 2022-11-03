@@ -18,7 +18,7 @@ read -r -p "You are branching of $current_branch to new branch $NEW_BRANCH are y
 case "$response" in
     [yY][eE][sS]|[yY]) 
         echo "Checking out to new $NEW_BRANCH"
-        git checkout -b $NEW_BRANCH
+        git checkout -b "$NEW_BRANCH"
         git status
         echo "Branch created"
         exit 0
